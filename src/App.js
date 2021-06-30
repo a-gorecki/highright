@@ -1,5 +1,4 @@
 import "./App.css";
-import { ExampleSendHighlight } from "./Components/ExampleSendHighlight/ExampleSendHighlight";
 import { ManagePage } from "./Components/ManagePage/ManagePage";
 
 function App() {
