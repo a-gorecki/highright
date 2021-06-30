@@ -12,12 +12,6 @@ export function messageInBackground() {
 
 // Add option when right-clicking
 chrome.contextMenus.create({ title: "Highlight", onclick: highlightTextFromContext, contexts: ["selection"] });
-chrome.contextMenus.create({ title: "Highlighter color", id: "highlight-colors" });
-chrome.contextMenus.create({ title: "Yellow", id: "yellow", parentId: "highlight-colors", type: "radio", onclick: changeColorFromContext });
-chrome.contextMenus.create({ title: "Cyan", id: "cyan", parentId: "highlight-colors", type: "radio", onclick: changeColorFromContext });
-chrome.contextMenus.create({ title: "Lime", id: "lime", parentId: "highlight-colors", type: "radio", onclick: changeColorFromContext });
-chrome.contextMenus.create({ title: "Magenta", id: "magenta", parentId: "highlight-colors", type: "radio", onclick: changeColorFromContext });
-
 
 // Highlight cursor 
 function highlightOnSelection() {
@@ -49,10 +43,6 @@ function highlightText() {
     file: "app/highlight.js"
   });
   console.log("i worksse");
-}
-
-function changeColorFromContext(info) {
-  changeColor(info.menuItemId);
 }
 
 function changeColor(color) {

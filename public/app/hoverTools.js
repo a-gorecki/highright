@@ -18,7 +18,7 @@ $.get(chrome.extension.getURL('hoverTools.html'), function (data) {
     deleteBtnEl = hoverToolEl.find('.highlighter--icon-delete')[0];
     changeColorBtnEl = hoverToolEl.find('.highlighter--icon-change-color')[0];
     copyBtnEl.addEventListener('click', onCopyBtnClicked);
-    deleteBtnEl.addEventListener('click', onDeleteBtnClicked);
+    //deleteBtnEl.addEventListener('click', onDeleteBtnClicked);
     changeColorBtnEl.addEventListener('click', onChangeColorBtnClicked);
 });
 
@@ -37,6 +37,7 @@ window.addEventListener("scroll", function (e) {
 
 function onHighlightMouseEnterOrClick(e) {
     const newHighlightEl = e.target;
+
     const newHighlightId = newHighlightEl.getAttribute('data-highlight-id');
 
     // If the previous action was a click but now it's a mouseenter, don't do anything
@@ -70,6 +71,8 @@ function onHighlightMouseLeave(e) {
 
 function moveToolbarToHighlight(highlightEl, cursorX) { // cursorX is optional, in which case no change is made to the x position of the hover toolbar
     const boundingRect = highlightEl.getBoundingClientRect();
+    console.log("highlightel");
+    console.log(highlightEl);
     const toolWidth = 94; // When changing this, also update the width in css #highlighter--hover-tools--container
 
     const hoverTop = boundingRect.top - 45;

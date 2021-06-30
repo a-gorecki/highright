@@ -6,7 +6,8 @@
     const selection = window.getSelection();
     const selectionString = selection.toString();
 
-    if (selectionString) { // If there is text selected
+
+    if (selectionString) { // If there is text selected 
 
         let container = selection.getRangeAt(0).commonAncestorContainer;
 
@@ -16,16 +17,14 @@
             container = container.parentNode;
         }
 
-        console.log(container.parentNode);
-
         chrome.storage.sync.get('color', (values) => {
-
             const color = values.color;
+
             store(selection, container, window.location.hostname + window.location.pathname, color, (highlightIndex) => {
                 highlight(selectionString, container, selection, color, highlightIndex);
             });
-            console.log(selectionString);
-            console.log(color);
         });
+
     }
 })();
+

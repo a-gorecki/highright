@@ -23,12 +23,14 @@
         "contentScript.bundle.js",
         "app/highlight.js",
         "app/highlighterCursor.js",
-        "app/storageManager.js",
         "app/hoverTools.js",
+        "app/storageManager.js",
+        "app/upload.js",
         "objects/highlight.js"
       ],
       "css": [
-        "hoverTools.css"
+        "hoverTools.css",
+        "app/inject.css"
       ]
     }
   ],

@@ -1,0 +1,57 @@
+.position-popup {
+    position: fixed;
+    padding-bottom: 8px;
+    z-index: 10000;
+    background-color: white;
+    position: absolute;
+    width: 160px;
+    height: 20;
+    border-radius: 8px;
+    z-index: 100;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+
+#highlighter--hover-tools {
+    position: fixed;
+    padding-bottom: 8px;
+    z-index: 10000;
+}
+
+#highlighter--hover-tools--container {
+    position: relative;
+    border: solid 1px #777777;
+    border-radius: 4px;
+    padding: 1px 0;
+    background-color: blues;
+    width: 94px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 2px #bdbdbd;
+}
+
+.highlighter--icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    filter: opacity(0.7);
+    margin: 0 4px;
+}
+
+.highlighter--icon:hover {
+    filter: opacity(0.92);
+}
+
+.highlighter--icon-icon {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/icon.svg');
+}
+
+.highlighter--icon-kebab-menu {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/kebab-menu/.svg');
+}

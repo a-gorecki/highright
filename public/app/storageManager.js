@@ -19,7 +19,7 @@ function store(selection, container, url, color, callback) {
             anchorOffset: selection.anchorOffset,
             focusNode: getQuery(selection.focusNode),
             focusOffset: selection.focusOffset,
-            color: color
+            color: color 
         });
         chrome.storage.local.set({ highlights });
 

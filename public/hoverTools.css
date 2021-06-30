@@ -13,9 +13,9 @@
     border: solid 1px #777777;
     border-radius: 4px;
     padding: 1px 0;
-    background-color: white;
+    background-color: blues;
     width: 94px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
-    height: 37px;
+    height: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -34,19 +34,6 @@
     pointer-events: none;
 }
 
-#highlighter--hover-tools--container:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-top-color: white;
-    border-width: 5px;
-    margin-left: -5px;
-}
-#highlighter--hover-tools--container:before {
-    border-color: rgba(119, 119, 119, 0);
-    border-top-color: #777777;
-    border-width: 6px;
-    margin-left: -6px;
-}
-
 .highlighter--icon {
     display: inline-block;
     width: 25px;
@@ -63,16 +50,24 @@
     filter: opacity(0.92);
 }
 
+.highlighter--icon-icon {
+    background-image: "img/icon.svg";
+}
+
+.highlighter--icon-more {
+    background-image: "img/more.svg";
+}
+
 .highlighter--icon-copy {
-    background-image:url('chrome-extension://__MSG_@@extension_id__/images/clipboard-outline.svg');
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/clipboard-outline.svg');
 }
 
 .highlighter--icon-delete {
-    background-image:url('chrome-extension://__MSG_@@extension_id__/images/trash-outline.svg');
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/trash-outline.svg');
 }
 
 .highlighter--icon-change-color {
-    background-image:url('chrome-extension://__MSG_@@extension_id__/images/color-palette-outline.svg');
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/color-palette-outline.svg');
 }
 
 .highlighter--separator {
