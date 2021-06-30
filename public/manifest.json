@@ -24,9 +24,13 @@
         "app/highlight.js",
         "app/highlighterCursor.js",
         "app/hoverTools.js",
-        "app/storageManager.js",
         "app/upload.js",
-        "objects/highlight.js"
+        "local_storage_scripts/storageManager.js",
+        "local_storage_scripts/errorManager.js",
+        "local_storage_scripts/getHighlights.js",
+        "local_storage_scripts/highlight_legacy.js",
+        "local_storage_scripts/highlight.js",
+        "local_storage_scripts/loadHighlights.js"
       ],
       "css": [
         "hoverTools.css",
@@ -48,9 +52,11 @@
     "<all_urls>"
   ],
   "web_accessible_resources": [
-    "img/clipboard-outline.svg",
-    "img/color-palette-outline.svg",
-    "img/trash-outline.svg",
+    "img/*.svg",
+    "img/*.png",
+    "*.svg",
+    "app/*.svg",
+    "app/*.png",
     "hoverTools.html"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"

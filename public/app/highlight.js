@@ -24,7 +24,6 @@
                 highlight(selectionString, container, selection, color, highlightIndex);
             });
         });
-
     }
 })();
 

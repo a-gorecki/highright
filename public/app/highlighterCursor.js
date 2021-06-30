@@ -26,28 +26,30 @@ const updatePopup = (selectionText, posX, posY) => {
 	console.log(selectionText, posX, posY)
 	if (document.getElementById('popup-time-gang-gang')) {
 		const popup = document.getElementById('popup-time-gang-gang')
-		const highlightText = document.getElementById("popup-text")
-		highlightText.innerHTML = selectionText
 		// POSITION	
-		popup.style.top = posY + 4 + "px";
-		popup.style.left = posX + 4 + "px";
+		popup.style.top = posY - 24 + "px";
+		popup.style.left = posX + 8 + "px";
 	} else {
 		const popupContainer = document.createElement("div");
 		popupContainer.setAttribute("id", "popup-time-gang-gang")
 		popupContainer.classList.add("position-popup")
 		// POSITION	
-		popupContainer.style.top = posY + 4 + "px";
-		popupContainer.style.left = posX + 4 + "px";
+		popupContainer.style.top = posY - 24 + "px";
+		popupContainer.style.left = posX + 8 + "px";
 
-		const title = document.createElement("h3");
-		title.setAttribute("id", "popup-title");
-		title.innerHTML = "Popup";
-		popupContainer.appendChild(title);
+        //row of buttons
+        const buttons = document.createElement("div");
+        buttons.setAttribute("id", "popup-time-gang-gang")
 
-		const highlightText = document.createElement("p");
-		highlightText.setAttribute("id", "popup-text");
-		highlightText.innerHTML = selectionText;
-		popupContainer.appendChild(highlightText);
+        const highlightButton = document.createElement("div");
+        highlightButton.setAttribute("class", "highlighter--icon highlighter--icon-icon")
+        buttons.append(highlightButton);
+
+        const kebabButton = document.createElement("div");
+        kebabButton.setAttribute("class", "highlighter--icon highlighter--icon-kebab-menu")
+        buttons.append(kebabButton);
+
+        popupContainer.append(buttons);
 
 		document.querySelector("body").appendChild(popupContainer);
 	}

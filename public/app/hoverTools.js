@@ -8,7 +8,7 @@ var copyBtnEl = null;
 var changeColorBtnEl = null;
 var deleteBtnEl = null;
 
-$.get(chrome.extension.getURL('hoverTools.html'), function (data) {
+$.get(chrome.extension.getURL('hoverTools.html'), function(data) {
     hoverToolEl = $(data);
     hoverToolEl.hide().appendTo('body');
     hoverToolEl[0].addEventListener('mouseenter', onHoverToolMouseEnter);
@@ -22,7 +22,7 @@ $.get(chrome.extension.getURL('hoverTools.html'), function (data) {
     changeColorBtnEl.addEventListener('click', onChangeColorBtnClicked);
 });
 
-// Allow clicking outside of a highlight to unselect ****
+// Allow clicking outside of a highlight to unselect
 window.addEventListener('click', function (e) {
     if (e.target.classList.contains('highlighter--highlighted')) return;
     if (e.target.classList.contains('highlighter--icon-change-color')) return;
@@ -37,7 +37,6 @@ window.addEventListener("scroll", function (e) {
 
 function onHighlightMouseEnterOrClick(e) {
     const newHighlightEl = e.target;
-
     const newHighlightId = newHighlightEl.getAttribute('data-highlight-id');
 
     // If the previous action was a click but now it's a mouseenter, don't do anything
@@ -71,8 +70,6 @@ function onHighlightMouseLeave(e) {
 
 function moveToolbarToHighlight(highlightEl, cursorX) { // cursorX is optional, in which case no change is made to the x position of the hover toolbar
     const boundingRect = highlightEl.getBoundingClientRect();
-    console.log("highlightel");
-    console.log(highlightEl);
     const toolWidth = 94; // When changing this, also update the width in css #highlighter--hover-tools--container
 
     const hoverTop = boundingRect.top - 45;
@@ -144,7 +141,7 @@ function onDeleteBtnClicked(e) {
 
 
 // feature: change color on popup menu
-function onChangeColorBtnClicked(e) {
+ function onChangeColorBtnClicked(e) {
     const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
     const highlights = $(`.highlighter--highlighted[data-highlight-id='${highlightId}']`);
     const colors = ["yellow", "cyan", "lime", "magenta"];
@@ -154,5 +151,5 @@ function onChangeColorBtnClicked(e) {
 
     update(highlightId, window.location.hostname + window.location.pathname, window.location.pathname, newColor); // update the value in the local storage
     chrome.runtime.sendMessage({ action: 'track-event', trackCategory: 'highlight-action', trackAction: 'change-color' });
-}
+ }
 
