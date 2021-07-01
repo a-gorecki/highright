@@ -48,6 +48,7 @@
         "url": url,
         "text": highlightedText,
         "title": title,
+        "topic": "demo",
         "colour": "yellow",
         });
 
