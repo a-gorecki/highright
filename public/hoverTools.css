@@ -76,3 +76,59 @@
     width: 0px;
     border-right: solid 1px #bfbfbf;
 }
+
+
+.color-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 160px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px 0;
+}
+
+.highlighter--yellowdot { 
+    height: 20px; 
+    width: 20px; 
+    background-color: #FDFFA8; 
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.greendot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#CBF9E5;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.reddot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#FFB2B2;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.bluedot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#A9DEFC;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.greydot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#C4C4C4;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}

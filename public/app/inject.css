@@ -1,12 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
 .position-popup {
     position: absolute;
     z-index: 10000;
     background-color: white;
     align-items: center;
+    width: 40;
+    height: 40;
     margin: 0 auto;
-    width: 80px;
     border-radius: 8px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.highlight-button-background { 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    filter: opacity(1);
+    border-radius: 50%; 
+    margin: 4 auto;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.kebab-options {
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
+    border: solid 1px #777777;
+    align-items: center;
+    padding: 12px 16px 8px 16px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 2px;
+    text-align: left
+
+}
+
+.kebab-titles {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20;
 }
 
 .highlighter--hover-tools {
@@ -21,12 +62,13 @@
     border-radius: 4px;
     padding: 1px 0;
     background-color: white;
-    width: 94px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
+    width: 200x; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
     height: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 1px 1px 2px #bdbdbd;
+    margin: 0 auto;
 }
 
 .highlighter--icon {
@@ -36,21 +78,100 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    left: 4px;
     cursor: pointer;
-    filter: opacity(0.7);
+    filter: opacity(0.72);
+    margin: 4px auto;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .highlighter--icon:hover {
-    filter: opacity(0.92);
+    filter: opacity(1);
 }
 
 .highlighter--icon-icon {
     background-image:url('chrome-extension://__MSG_@@extension_id__/img/icon.svg');
-    background-size: 24px 24px;
+    background-size: 32px 32px;
 }
 
 .highlighter--icon-kebab-menu {
     background-image:url('chrome-extension://__MSG_@@extension_id__/img/kebab-menu.svg');
     background-size: 12px 12px;
+}
 
+.highlighter--icon-delete {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/trash-outline.svg');
+    background-size: 20px 20px;
+    align-self: right;
+}
+
+.highlighter--icon-icon {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/tag.svg');
+    background-size: 32px 32px;
+}
+
+.highlighter--icon-icon {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/comment.svg');
+    background-size: 32px 32px;
+}
+
+
+.color-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 180px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px 0;
+}
+
+.yellowdot { 
+    height: 20px; 
+    width: 20px; 
+    background-color: #FDFFA8; 
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.greendot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#CBF9E5;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.reddot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#FFB2B2;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.bluedot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#A9DEFC;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
+}
+.greydot { 
+    height: 20px; 
+    width: 20px; 
+    background-color:#C4C4C4;
+    border-radius: 50%; 
+    padding: 8px auto;
+    margin: 4px auto;
+    display: table-cell
 }

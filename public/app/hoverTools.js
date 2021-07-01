@@ -4,9 +4,13 @@ var hoverToolEl = null;
 var hoverToolTimeout = null;
 var currentHighlightEl = null;
 var highlightClicked = false;
-var copyBtnEl = null;
-var changeColorBtnEl = null;
 var deleteBtnEl = null;
+var yellowBtn = null;
+var greenBtn = null;
+var redBtn = null;
+var blueBtn = null;
+var greyBtn = null;
+
 
 $.get(chrome.extension.getURL('hoverTools.html'), function(data) {
     hoverToolEl = $(data);
@@ -14,12 +18,20 @@ $.get(chrome.extension.getURL('hoverTools.html'), function(data) {
     hoverToolEl[0].addEventListener('mouseenter', onHoverToolMouseEnter);
     hoverToolEl[0].addEventListener('mouseleave', onHighlightMouseLeave);
 
-    copyBtnEl = hoverToolEl.find('.highlighter--icon-copy')[0];
     deleteBtnEl = hoverToolEl.find('.highlighter--icon-delete')[0];
-    changeColorBtnEl = hoverToolEl.find('.highlighter--icon-change-color')[0];
-    copyBtnEl.addEventListener('click', onCopyBtnClicked);
-    //deleteBtnEl.addEventListener('click', onDeleteBtnClicked);
-    changeColorBtnEl.addEventListener('click', onChangeColorBtnClicked);
+    yellowBtn = document.getElementById("yellow");
+    greenBtn = document.getElementById("green");
+    redBtn = document.getElementById("red");
+    blueBtn = document.getElementById("blue");
+    greyBtn = document.getElementById("grey");
+
+    deleteBtnEl.addEventListener('click', onDeleteBtnClicked);
+    yellowBtn.addEventListener('click', onChangeColorBtnClicked)
+    greenBtn.addEventListener('click', onChangeColorBtnClicked)
+    redBtn.addEventListener('click', onChangeColorBtnClicked)
+    blueBtn.addEventListener('click', onChangeColorBtnClicked)
+    greyBtn.addEventListener('click', onChangeColorBtnClicked)
+
 });
 
 // Allow clicking outside of a highlight to unselect
@@ -70,9 +82,9 @@ function onHighlightMouseLeave(e) {
 
 function moveToolbarToHighlight(highlightEl, cursorX) { // cursorX is optional, in which case no change is made to the x position of the hover toolbar
     const boundingRect = highlightEl.getBoundingClientRect();
-    const toolWidth = 94; // When changing this, also update the width in css #highlighter--hover-tools--container
+    const toolWidth = 160; // When changing this, also update the width in css #highlighter--hover-tools--container
 
-    const hoverTop = boundingRect.top - 45;
+    const hoverTop = boundingRect.top + 24;
     hoverToolEl.css({ top: hoverTop });
 
     if (cursorX !== undefined) {
@@ -111,15 +123,8 @@ function onHoverToolMouseEnter(e) {
     }
 }
 
-function onCopyBtnClicked(e) {
-    const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
-    const highlights = document.querySelectorAll(`.highlighter--highlighted[data-highlight-id='${highlightId}']`);
-    const highlightText = Array.from(highlights).map((el) => el.textContent.replace(/\s+/gm, ' ')).join(''); // clean up whitespace
-    navigator.clipboard.writeText(highlightText);
-    chrome.runtime.sendMessage({ action: 'track-event', trackCategory: 'highlight-action', trackAction: 'copy' });
-}
-
 function onDeleteBtnClicked(e) {
+    console.log(e.target)
     const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
     const highlights = $(`.highlighter--highlighted[data-highlight-id='${highlightId}']`);
     $('.highlighter--hovered').removeClass('highlighter--hovered');
@@ -142,11 +147,14 @@ function onDeleteBtnClicked(e) {
 
 // feature: change color on popup menu
  function onChangeColorBtnClicked(e) {
+    console.log(e.target) 
+    e.trackAction
     const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
     const highlights = $(`.highlighter--highlighted[data-highlight-id='${highlightId}']`);
-    const colors = ["yellow", "cyan", "lime", "magenta"];
+    const colors = {"yellow": "#FDFFA8", "green": "#CBF9E5", "red": "#FFB2B2", "blue": "#A9DEFC", "grey": "#C4C4C4"};
+
     const currentColor = highlights[0].style.backgroundColor;
-    const newColor = colors[(colors.indexOf(currentColor) + 1) % 4];
+    const newColor = colors[e.target.id];
     highlights.css('backgroundColor', newColor); // Change the background color attribute
 
     update(highlightId, window.location.hostname + window.location.pathname, window.location.pathname, newColor); // update the value in the local storage

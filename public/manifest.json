@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
+  "type": "module",
   "short_name": "React App",
   "name": "Create React App Sample",
   "description": "Sample application showing how to create an extension with Create React App",
@@ -21,8 +22,8 @@
       "js": [
         "jquery-2.1.3.min.js",
         "contentScript.bundle.js",
-        "app/highlight.js",
         "app/highlighterCursor.js",
+        "app/highlight.js",
         "app/hoverTools.js",
         "app/upload.js",
         "local_storage_scripts/storageManager.js",
