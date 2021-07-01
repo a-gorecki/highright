@@ -1,11 +1,10 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "description": "Sample application showing how to create an extension with Create React App",
+  "name": "HighRight",
+  "description": "Highlight text in your browser the RIGHT way.",
   "browser_action": {
-    "default_title": "CRE",
+    "default_title": "HighRight",
     "default_popup": "popup.html"
   },
   "background": {
@@ -18,11 +17,11 @@
     }
   ],
   "icons": {
-    "16": "img/icon-16.png",
-    "48": "img/icon-48.png",
-    "128": "img/icon-128.png"
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
   },
   "options_page": "options.html",
-  "permissions": ["activeTab"],
+  "permissions": ["tabs"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

@@ -1,40 +1,116 @@
 .App {
-  text-align: center;
+    min-height: 550px;
+    width: 350px;
+    padding: 0;
+    background-color: white;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+    font: 300 13px 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header {
+    background-color: white;
+    border-bottom: 1px solid #E5E5E5;
+    height: 45px;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 150px;
-  min-width: 150px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.HeaderHeading {
+    font: 300 16px/45px 'Poppins', sans-serif;
+    margin: 0;
+    text-decoration: none;
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.HamburgerButton {
+    padding: 10px !important;
+    min-width: 0px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HamburgerMenu ul, .HamburgerMenu li {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: right !important;
+}
+
+.NoHighlights {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+.NoHighlights h1 {
+    font: 300 35px 'Poppins', sans-serif;
+}
+
+.NoHighlights img {
+    width: 80px;
+}
+
+.Highlights {
+    position: relative;
+    top: 45px;
+}
+.Highlight {
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.QuoteIcon {
+    width: 12px;
+    height: 12px; 
+    border-radius: 9px;
+    padding: 3px;
+    margin: 14px 0 8px 12px;
+}
+
+.HighlightInfoContainer {
+    padding-left: 15px;
+    padding-right: 8px;
+}
+
+.HighlightText {
+    font: 500 13px 'Poppins', sans-serif;
+    margin-bottom: 5px;
+}
+
+.TagIcon {
+    position: relative;
+    top: 4px;
+    margin-right: 6px;
+}
+
+.TagText {
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    font: 300 12px 'Poppins', sans-serif;
+    padding: 1px 8px;
+}
+
+.DeleteButtonContainer {
+    position: relative;
+}
+
+.DeleteButton {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+}
+.DeleteButton:hover {
+    cursor: pointer;
+}
+
+.CommentsHeading {
+    font: 500 13px 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.item-exit-active {
+    opacity: 0;   
+    transition: 700ms ease-out;
 }
