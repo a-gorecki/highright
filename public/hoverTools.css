@@ -8,32 +8,6 @@
     z-index: 10000;
 }
 
-#highlighter--hover-tools--container {
-    position: relative;
-    border: solid 1px #777777;
-    border-radius: 4px;
-    padding: 1px 0;
-    background-color: blues;
-    width: 94px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
-    height: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 1px 1px 2px #bdbdbd;
-}
-
-/* Generated with http://www.cssarrowplease.com/ */
-#highlighter--hover-tools--container:after, #highlighter--hover-tools--container:before {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
 .highlighter--icon {
     display: inline-block;
     width: 25px;
@@ -51,23 +25,11 @@
 }
 
 .highlighter--icon-icon {
-    background-image: "img/icon.svg";
-}
-
-.highlighter--icon-more {
-    background-image: "img/more.svg";
-}
-
-.highlighter--icon-copy {
-    background-image:url('chrome-extension://__MSG_@@extension_id__/img/clipboard-outline.svg');
+    background-image:url('chrome-extension://__MSG_@@extension_id__/img/icon.svg'); 
 }
 
 .highlighter--icon-delete {
     background-image:url('chrome-extension://__MSG_@@extension_id__/img/trash-outline.svg');
-}
-
-.highlighter--icon-change-color {
-    background-image:url('chrome-extension://__MSG_@@extension_id__/img/color-palette-outline.svg');
 }
 
 .highlighter--separator {

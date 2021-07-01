@@ -21,6 +21,7 @@
     background-position: center;
     cursor: pointer;
     filter: opacity(1);
+    background-color: pink;
     border-radius: 50%; 
     margin: 4 auto;
     user-select: none;
@@ -73,8 +74,8 @@
 
 .highlighter--icon {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

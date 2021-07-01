@@ -68,7 +68,7 @@ const updatePopup = (selectionText, posX, posY) => {
             highlightButton.setAttribute("left", popupContainer.style.left)
             highlightButton.addEventListener('mousedown', toggleColorMenu)
             const highlightIcon = document.createElement("div")
-            highlightIcon.setAttribute("class", "highlighter--icon highlighter--icon-icon")
+            highlightIcon.setAttribute("class", "highlighter--icon highlighter--icon--delete")
             highlightButton.appendChild(highlightIcon)
             buttons.append(highlightButton);
 
@@ -99,9 +99,6 @@ function toggleColorMenu() {
     if (selectionString) { // If there is text selected
         chrome.runtime.sendMessage({ action: 'highlight' });
     }
-
-
-
 }
 
 //Kebab Menu
