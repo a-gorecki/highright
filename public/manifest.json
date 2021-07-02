@@ -1,0 +1,63 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "HighRight",
+  "description": "Highlight text in your browser the RIGHT way.",
+  "browser_action": {
+    "default_title": "HighRight",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.bundle.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery-2.1.3.min.js",
+        "contentScript.bundle.js",
+        "app/highlighterCursor.js",
+        "app/highlight.js",
+        "app/hoverTools.js",
+        "app/upload.js",
+        "local_storage_scripts/storageManager.js",
+        "local_storage_scripts/errorManager.js",
+        "local_storage_scripts/getHighlights.js",
+        "local_storage_scripts/highlight_legacy.js",
+        "local_storage_scripts/highlight.js",
+        "local_storage_scripts/loadHighlights.js"
+      ],
+      "css": [
+        "hoverTools.css",
+        "app/inject.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "img/*.svg",
+    "img/*.png",
+    "*.svg",
+    "app/*.svg",
+    "app/*.png",
+    "hoverTools.html"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
