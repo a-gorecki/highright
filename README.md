@@ -32,3 +32,9 @@ Special thanks to all the mentors who helped us along the design and development
 - [api](api) contains the API documentation and the AWS lambda functions developed for the project
 - [highrightDesign.fig](highrightDesign.fig) contains the wireframes and high-fidelity mockups designed on Figma.
 - [presentation](presentation.pdf) contains the slides of our presentation to the bootcamp judges
+
+### Opensource Acknowledgements
+[Highlighter's](https://github.com/jeromepl/highlighter) code was referenced extensively for assistance in getting external page highlights to function.
+React JS
+Material-UI
+Axios
