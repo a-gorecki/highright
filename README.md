@@ -34,7 +34,7 @@ Special thanks to all the mentors who helped us along the design and development
 - [presentation](presentation.pdf) contains the slides of our presentation to the bootcamp judges
 
 ### Opensource Acknowledgements
-[Highlighter's](https://github.com/jeromepl/highlighter) code was referenced extensively for assistance in getting external page highlights to function.
-React JS
-Material-UI
-Axios
+- [Highlighter's](https://github.com/jeromepl/highlighter) code was referenced extensively for assistance in getting external page highlights to function.
+- React JS
+- Material-UI
+- Axios
