@@ -23,7 +23,9 @@ HIGHRIGHT was designed and built for the *Accenture Tech Bootcamp 2021* in Melbo
 | Amy Luo         | https://www.linkedin.com/in/amy-dong-luo/              |
 | Deexita Goli    | https://www.linkedin.com/in/deexita-goli-8b8913161/    |
 
-## Product details
+Special thanks to all the mentors who helped us along the design and development process! We wouldn't have been able to deliver this without your support.
+
+## Repo details
 
 - [plugin](plugin) contains the Chrome extension which allows users to highlight text on a webpage, and manage the highlights made on a single page.
 - [webapp](webapp) contains the React app for the accompanying webapp, which allows users to manage their collection of highlights.
