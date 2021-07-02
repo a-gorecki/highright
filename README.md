@@ -12,7 +12,7 @@ HIGHRIGHT was designed and built for the *Accenture Tech Bootcamp 2021* in Melbo
 | **Leah Tran**         | UI/UX Design                                   | https://www.linkedin.com/in/leahkimtran/                     |
 | **Jerry Zhou**        | Front-end developer                            | https://www.linkedin.com/in/jerry-zhou-unimelb/<br />https://github.com/JEZHOU99 |
 | **Matt Cho**          | Front-end developer <br />and machine learning |                                                              |
-| **Priyanka Priyanka** | UI/UX Design                                   | https://www.linkedin.com/in/priyanka-priyanka13/             |
+| **Priyanka Priyanka** | UI/UX Design                                   | https://www.linkedin.com/in/priyanka-priyanka13/>https://github.com/Priyanka-priyanka |        |
 
 #### Mentors
 
